@@ -1,0 +1,1072 @@
+<?xml version="1.0" ?>
+<robot name="simplified_df_bot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find simplified_df_bot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find simplified_df_bot_description)/urdf/simplified_df_bot.trans" />
+<xacro:include filename="$(find simplified_df_bot_description)/urdf/simplified_df_bot.gazebo" />
+<!-- <xacro:include filename="$(find simplified_df_bot_description)/urdf/box.xacro" /> -->
+
+<!-- <link name="world" >
+  <joint name="base_joint" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+  </joint> -->
+
+
+
+
+
+<!-- 
+
+<joint name="cube_joint" type="fixed">
+  <parent link="world"/>
+  <child link="cube_link"/>
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+</joint>
+
+<link name="cube_link">
+  <inertial>
+    <origin xyz="-0.109796 0.188449 0.41" rpy="0 0 0.564658"/>
+    <mass>1.0</mass>
+    <inertia>
+      <ixx>0.01</ixx>
+      <ixy>0.0</ixy>
+      <ixz>0.0</ixz>
+      <iyy>0.01</iyy>
+      <iyz>0.0</iyz>
+      <izz>0.01</izz>
+    </inertia>
+  </inertial>
+  <collision name="stairs_collision0">
+    <pose>0 0 0 0 0 0</pose>
+    <origin xyz="-0.109796 0.188449 0.41" rpy="0 0 0.564658"/>
+    <geometry>
+      <box>
+        <size>0.2 0.2 0.2</size>
+      </box>
+    </geometry>
+    <surface>
+      <bounce />
+      <friction>
+        <ode>
+          <mu>1.0</mu>
+          <mu2>1.0</mu2>
+        </ode>
+      </friction>
+      <contact>
+        <ode>
+          <kp>10000000.0</kp>
+          <kd>1.0</kd>
+          <min_depth>0.0</min_depth>
+          <max_vel>0.0</max_vel>
+        </ode>
+      </contact>
+    </surface>
+  </collision>
+  <visual name="stairs_visual0">
+    <pose>0 0 0 0 0 0</pose>
+    <origin xyz="-0.109796 0.188449 0.41" rpy="0 0 0.564658"/>
+    <geometry>
+      <box>
+        <size>0.2 0.2 0.2</size>
+      </box>
+    </geometry>
+    <material>
+      <script>
+        <uri>file://media/materials/scripts/gazebo.material</uri>
+        <name>Gazebo/Wood</name>
+      </script>
+    </material>
+  </visual>
+  <velocity_decay>
+    <linear>0.000000</linear>
+    <angular>0.000000</angular>
+  </velocity_decay>
+  <self_collide>0</self_collide>
+  <kinematic>0</kinematic>
+  <gravity>1</gravity>
+</link> -->
+
+
+
+
+
+
+
+
+
+
+
+<link name="dummy_link">
+  <visual>
+    <geometry>
+      <!-- <sphere radius="0.1"/> -->
+    </geometry>  
+  </visual>
+  <collision>
+    <geometry>
+      <cylinder radius="0.1" length="0.05"/>
+    </geometry>
+  </collision>
+</link>
+<!-- <joint name="dummy_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+  <parent link="world"/>
+  <child link="dummy_link"/>
+</joint> -->
+
+
+
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="5.882906319182324e-17 1.7648718957546974e-16 0.1" rpy="0 0 0"/>
+    <mass value="20.0"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="dummy_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+  <parent link="dummy_link"/>
+  <child link="base_link"/>
+</joint>
+
+
+<!-- <link name="base_link">
+  <inertial>
+    <origin xyz="5.882906319182324e-17 1.7648718957546974e-16 0.1" rpy="0 0 0"/>
+    <mass value="310.68326665737465"/>
+    <inertia ixx="6.072348" iyy="6.072348" izz="10.072002" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link> -->
+
+<link name="link_06_1">
+  <inertial>
+    <origin xyz="-0.0368464821240182 -1.9921731365252215e-12 5.978111764379235e-06" rpy="0 0 0"/>
+    <mass value="4.433293446694715"/>
+    <inertia ixx="0.005127" iyy="0.004764" izz="0.004765" ixy="-0.0" iyz="-0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="1.380581 -0.001 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_06_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="1.380581 -0.001 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_06_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_04_1">
+  <inertial>
+    <origin xyz="-0.07035754856740128 -0.016104742060408204 1.517665215770847e-05" rpy="0 0 0"/>
+    <mass value="5.1993600993385725"/>
+    <inertia ixx="0.00568" iyy="0.014947" izz="0.014406" ixy="-0.00256" iyz="1e-06" ixz="-2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="1.168781 -0.001 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_04_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="1.168781 -0.001 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_04_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_03_1">
+  <inertial>
+    <origin xyz="-0.08504656906945252 0.02100756029421222 -2.581268532253489e-15" rpy="0 0 0"/>
+    <mass value="7.386447086800841"/>
+    <inertia ixx="0.008529" iyy="0.064617" izz="0.0646" ixy="-0.007036" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.960381 0.0054 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_03_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.960381 0.0054 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_03_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_02_1">
+  <inertial>
+    <origin xyz="-0.20500012382722788 -0.03418871169382212 -1.582067810090848e-15" rpy="0 0 0"/>
+    <mass value="14.58780046613597"/>
+    <inertia ixx="0.013991" iyy="0.372842" izz="0.364575" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.550381 0.0054 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_02_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.550381 0.0054 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_02_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_01_1">
+  <inertial>
+    <origin xyz="-0.0817064051027378 0.01324350415807088 6.394912474561032e-09" rpy="0 0 0"/>
+    <mass value="5.703213948140757"/>
+    <inertia ixx="0.005605" iyy="0.020934" izz="0.020125" ixy="0.002418" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.421981 -0.0 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_01_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.421981 -0.0 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_01_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_00_1">
+  <inertial>
+    <origin xyz="-0.07820012382722791 0.0 -2.498001805406602e-16" rpy="0 0 0"/>
+    <mass value="9.642647411295828"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.265581 -0.0 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_00_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.265581 -0.0 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_00_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_05_1">
+  <inertial>
+    <origin xyz="-0.03500375445159021 0.01621486227236766 -3.469446951953614e-15" rpy="0 0 0"/>
+    <mass value="5.095887797721418"/>
+    <inertia ixx="0.005678" iyy="0.014849" izz="0.01434" ixy="-0.002544" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="1.274681 -0.001 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_05_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="1.274681 -0.001 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_05_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_06__2__1">
+  <inertial>
+    <origin xyz="0.018422748032258074 0.031910175113788464 5.972981881374739e-06" rpy="0 0 0"/>
+    <mass value="4.433289377409054"/>
+    <inertia ixx="0.004855" iyy="0.005036" izz="0.004765" ixy="0.000157" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.691157 -1.195118 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_06__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.691157 -1.195118 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_06__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_05__2__1">
+  <inertial>
+    <origin xyz="0.03154387842340445 0.022206825440708178 -3.4833247397614286e-15" rpy="0 0 0"/>
+    <mass value="5.095883275701127"/>
+    <inertia ixx="0.014759" iyy="0.005767" izz="0.01434" ixy="-0.002699" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.638207 -1.103406 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_05__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.638207 -1.103406 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_05__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_04__2__1">
+  <inertial>
+    <origin xyz="0.021231352414371685 0.06898390276936062 1.5131972715756725e-05" rpy="0 0 0"/>
+    <mass value="5.1992956413018465"/>
+    <inertia ixx="0.014848" iyy="0.00578" izz="0.014406" ixy="-0.002733" iyz="1e-06" ixz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.585257 -1.011694 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_04__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.585257 -1.011694 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_04__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_03__2__1">
+  <inertial>
+    <origin xyz="0.06071632833346885 0.06314905250668756 -2.581268532253489e-15" rpy="0 0 0"/>
+    <mass value="7.3864471129496785"/>
+    <inertia ixx="0.056688" iyy="0.016458" izz="0.0646" ixy="-0.020769" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.475514 -0.834414 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_03__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.475514 -0.834414 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_03__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_02__2__1">
+  <inertial>
+    <origin xyz="0.07289173188366727 0.1946295986205281 -1.1921019726912618e-14" rpy="0 0 0"/>
+    <mass value="14.587800466132698"/>
+    <inertia ixx="0.283129" iyy="0.103704" izz="0.364575" ixy="-0.155387" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.270514 -0.479344 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_02__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.270514 -0.479344 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_02__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_01__2__1">
+  <inertial>
+    <origin xyz="0.052321921723608805 0.06413833577473343 -8.049116928532385e-16" rpy="0 0 0"/>
+    <mass value="5.703213064083743"/>
+    <inertia ixx="0.015007" iyy="0.011531" izz="0.020125" ixy="-0.007847" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.210991 -0.365446 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_01__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.210991 -0.365446 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_01__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_00__2__1">
+  <inertial>
+    <origin xyz="0.03909956191361422 0.0677231865759432 -2.7755575615628914e-16" rpy="0 0 0"/>
+    <mass value="9.642647411295828"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.132791 -0.23 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_00__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.132791 -0.23 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_00__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_06__1__1">
+  <inertial>
+    <origin xyz="0.01842269661664442 -0.031910175053158074 5.973118036767255e-06" rpy="0 0 0"/>
+    <mass value="4.433289348431792"/>
+    <inertia ixx="0.004855" iyy="0.005036" izz="0.004765" ixy="-0.000157" iyz="1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.689425 1.196118 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_06__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.689425 1.196118 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_06__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_05__1__1">
+  <inertial>
+    <origin xyz="0.0034588624455299533 -0.03842168764196496 -3.4833247397614286e-15" rpy="0 0 0"/>
+    <mass value="5.0958832757011345"/>
+    <inertia ixx="0.010353" iyy="0.010174" izz="0.01434" ixy="0.005243" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.636475 1.104406 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_05__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.636475 1.104406 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_05__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_04__1__1">
+  <inertial>
+    <origin xyz="0.04912534284051251 -0.05287927055429176 1.513197271578448e-05" rpy="0 0 0"/>
+    <mass value="5.199295641301849"/>
+    <inertia ixx="0.010414" iyy="0.010214" izz="0.014406" ixy="0.005293" iyz="-2e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.583525 1.012694 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_04__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.583525 1.012694 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_04__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_03__1__1">
+  <inertial>
+    <origin xyz="0.02433024080236318 -0.08415661286979792 -2.5951463200613034e-15" rpy="0 0 0"/>
+    <mass value="7.386447112949688"/>
+    <inertia ixx="0.044502" iyy="0.028644" izz="0.0646" ixy="0.027805" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.484867 0.829014 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_03__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.484867 0.829014 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_03__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_02__1__1">
+  <inertial>
+    <origin xyz="0.13210839194356055 -0.16044088692670783 -1.189326415129699e-14" rpy="0 0 0"/>
+    <mass value="14.587800466132709"/>
+    <inertia ixx="0.283129" iyy="0.103704" izz="0.364575" ixy="0.155387" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.279867 0.473944 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_02__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.279867 0.473944 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_02__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_01__1__1">
+  <inertial>
+    <origin xyz="0.029383486986979207 -0.07738184724471547 -7.632783294297951e-16" rpy="0 0 0"/>
+    <mass value="5.7032130640837435"/>
+    <inertia ixx="0.019196" iyy="0.007343" izz="0.020125" ixy="0.005429" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.210991 0.365446 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_01__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.210991 0.365446 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_01__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_00__1__1">
+  <inertial>
+    <origin xyz="0.039099561913613995 -0.06772318657594326 -2.3592239273284576e-16" rpy="0 0 0"/>
+    <mass value="9.642647411295831"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.132791 0.23 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_00__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.132791 0.23 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplified_df_bot_description/meshes/link_00__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+
+
+
+
+<joint name="arm_01_joint_01" type="revolute">
+  <origin xyz="-0.1059 0.0 0.0" rpy="0 0 0"/>
+  <parent link="link_05_1"/>
+  <child link="link_06_1"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+  <limit upper="3.141592" lower="-3.141592" effort="10000" velocity="3"/>
+</joint>
+
+<joint name="arm_01_joint_03" type="revolute">
+  <origin xyz="-0.2084 0.0064 0.0" rpy="0 0 0"/>
+  <parent link="link_03_1"/>
+  <child link="link_04_1"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+  <limit upper="3.141592" lower="-3.141592" effort="10000" velocity="3"/>
+</joint>
+
+<joint name="arm_01_joint_04" type="revolute">
+  <origin xyz="-0.41 0.0 0.0" rpy="0 0 0"/>
+  <parent link="link_02_1"/>
+  <child link="link_03_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit upper="2.530727" lower="-2.530727" effort="10000" velocity="3"/>
+</joint>
+
+<joint name="arm_01_joint_05" type="revolute">
+  <origin xyz="-0.1284 -0.0054 0.0" rpy="0 0 0"/>
+  <parent link="link_01_1"/>
+  <child link="link_02_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit upper="2.094395" lower="-2.094395" effort="10000" velocity="3"/>
+</joint>
+
+<joint name="arm_01_joint_06" type="revolute">
+  <origin xyz="-0.1564 0.0 0.0" rpy="0 0 0"/>
+  <parent link="link_00_1"/>
+  <child link="link_01_1"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+  <limit upper="3.141592" lower="-3.141592" effort="10000" velocity="3"/>
+</joint>
+
+<joint name="arm_01_joint_base" type="fixed">
+  <origin xyz="-0.265581 0.0 0.1" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="link_00_1"/>
+</joint>
+
+<joint name="arm_01_joint_02" type="revolute">
+  <origin xyz="-0.1059 0.0 0.0" rpy="0 0 0"/>
+  <parent link="link_04_1"/>
+  <child link="link_05_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit upper="1.919862" lower="-1.919862" effort="10000" velocity="3"/>
+</joint>
+
+<joint name="arm_02_joint_01" type="revolute">
+  <origin xyz="0.05295 0.091712 0.0" rpy="0 0 0"/>
+  <parent link="link_05__2__1"/>
+  <child link="link_06__2__1"/>
+  <axis xyz="0.5 0.866025 -0.0"/>
+  <limit upper="3.141592" lower="-3.141592" effort="10000" velocity="3"/>
+</joint>
+
+<joint name="arm_02_joint_02" type="revolute">
+  <origin xyz="0.05295 0.091712 0.0" rpy="0 0 0"/>
+  <parent link="link_04__2__1"/>
+  <child link="link_05__2__1"/>
+  <axis xyz="0.866025 -0.5 -0.0"/>
+  <limit upper="1.919862" lower="-1.919862" effort="10000" velocity="3"/>
+</joint>
+
+<joint name="arm_02_joint_03" type="revolute">
+  <origin xyz="0.109743 0.17728 0.0" rpy="0 0 0"/>
+  <parent link="link_03__2__1"/>
+  <child link="link_04__2__1"/>
+  <axis xyz="0.5 0.866025 -0.0"/>
+  <limit upper="3.141592" lower="-3.141592" effort="10000" velocity="3"/>
+</joint>
+
+<joint name="arm_02_joint_04" type="revolute">
+  <origin xyz="0.205 0.35507 0.0" rpy="0 0 0"/>
+  <parent link="link_02__2__1"/>
+  <child link="link_03__2__1"/>
+  <axis xyz="0.866025 -0.5 -0.0"/>
+  <limit upper="2.530727" lower="-2.530727" effort="10000" velocity="3"/>
+</joint>
+
+<joint name="arm_02_joint_05" type="revolute">
+  <origin xyz="0.059523 0.113898 0.0" rpy="0 0 0"/>
+  <parent link="link_01__2__1"/>
+  <child link="link_02__2__1"/>
+  <axis xyz="0.866025 -0.5 -0.0"/>
+  <limit upper="2.094395" lower="-2.094395" effort="10000" velocity="3"/>
+</joint>
+
+<joint name="arm_02_joint_06" type="revolute">
+  <origin xyz="0.0782 0.135446 0.0" rpy="0 0 0"/>
+  <parent link="link_00__2__1"/>
+  <child link="link_01__2__1"/>
+  <axis xyz="0.5 0.866025 -0.0"/>
+  <limit upper="3.141592" lower="-3.141592" effort="10000" velocity="3"/>
+</joint>
+
+<joint name="arm_02_joint_base" type="fixed">
+  <origin xyz="0.132791 0.23 0.1" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="link_00__2__1"/>
+</joint>
+
+<joint name="arm_03_joint_01" type="revolute">
+  <origin xyz="0.05295 -0.091712 0.0" rpy="0 0 0"/>
+  <parent link="link_05__1__1"/>
+  <child link="link_06__1__1"/>
+  <axis xyz="0.5 -0.866025 -0.0"/>
+  <limit upper="3.141592" lower="-3.141592" effort="10000" velocity="3"/>
+</joint>
+
+<joint name="arm_03_joint_02" type="revolute">
+  <origin xyz="0.05295 -0.091712 0.0" rpy="0 0 0"/>
+  <parent link="link_04__1__1"/>
+  <child link="link_05__1__1"/>
+  <axis xyz="-0.866025 -0.5 -0.0"/>
+  <limit upper="1.919862" lower="-1.919862" effort="10000" velocity="3"/>
+</joint>
+
+<joint name="arm_03_joint_03" type="revolute">
+  <origin xyz="0.098658 -0.18368 0.0" rpy="0 0 0"/>
+  <parent link="link_03__1__1"/>
+  <child link="link_04__1__1"/>
+  <axis xyz="0.5 -0.866025 -0.0"/>
+  <limit upper="3.141592" lower="-3.141592" effort="10000" velocity="3"/>
+</joint>
+
+<joint name="arm_03_joint_04" type="revolute">
+  <origin xyz="0.205 -0.35507 0.0" rpy="0 0 0"/>
+  <parent link="link_02__1__1"/>
+  <child link="link_03__1__1"/>
+  <axis xyz="-0.866025 -0.5 -0.0"/>
+  <limit upper="2.530727" lower="-2.530727" effort="10000" velocity="3"/>
+</joint>
+
+<joint name="arm_03_joint_05" type="revolute">
+  <origin xyz="0.068876 -0.108498 0.0" rpy="0 0 0"/>
+  <parent link="link_01__1__1"/>
+  <child link="link_02__1__1"/>
+  <axis xyz="-0.866025 -0.5 -0.0"/>
+  <limit upper="2.094395" lower="-2.094395" effort="10000" velocity="3"/>
+</joint>
+
+<joint name="arm_03_joint_06" type="revolute">
+  <origin xyz="0.0782 -0.135446 0.0" rpy="0 0 0"/>
+  <parent link="link_00__1__1"/>
+  <child link="link_01__1__1"/>
+  <axis xyz="0.5 -0.866025 -0.0"/>
+  <limit upper="3.141592" lower="-3.141592" effort="10000" velocity="3"/>
+</joint>
+
+<joint name="arm_03_joint_base" type="fixed">
+  <origin xyz="0.132791 -0.23 0.1" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="link_00__1__1"/>
+</joint>
+
+
+
+
+<!-- 
+<transmission name="arm_01_joint_01_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_01_joint_01">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_01_joint_01_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_01_joint_02_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_01_joint_02">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_01_joint_02_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_01_joint_03_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_01_joint_03">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_01_joint_03_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+
+<transmission name="arm_01_joint_04_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_01_joint_04">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_01_joint_04_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_01_joint_05_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_01_joint_05">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_01_joint_05_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_01_joint_06_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_01_joint_06">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_01_joint_06_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+
+
+
+<transmission name="arm_02_joint_01_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_02_joint_01">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_02_joint_01_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_02_joint_02_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_02_joint_02">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_02_joint_02_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_02_joint_03_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_02_joint_03">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_02_joint_03_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+
+<transmission name="arm_02_joint_04_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_02_joint_04">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_02_joint_04_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_02_joint_05_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_02_joint_05">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_02_joint_05_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_02_joint_06_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_02_joint_06">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_02_joint_06_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+
+
+<transmission name="arm_03_joint_01_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_03_joint_01">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_03_joint_01_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_03_joint_02_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_03_joint_02">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_03_joint_02_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_03_joint_03_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_03_joint_03">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_03_joint_03_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+
+<transmission name="arm_03_joint_04_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_03_joint_04">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_03_joint_04_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_03_joint_05_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_03_joint_05">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_03_joint_05_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_03_joint_06_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_03_joint_06">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_03_joint_06_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission> -->
+
+<!-- 
+<gazebo>
+  <plugin name="control" filename="libgazebo_ros_control.so">
+    <robotNamespace>/</robotNamespace>
+  </plugin>
+</gazebo>
+
+
+<gazebo reference="arm_01_joint_01">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="arm_01_joint_02">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="arm_01_joint_03">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="arm_01_joint_04">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="arm_01_joint_05">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="arm_01_joint_06">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+
+
+<gazebo reference="arm_02_joint_01">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="arm_02_joint_02">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="arm_02_joint_03">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="arm_02_joint_04">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="arm_02_joint_05">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="arm_02_joint_06">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+
+
+<gazebo reference="arm_03_joint_01">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="arm_03_joint_02">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="arm_03_joint_03">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="arm_03_joint_04">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="arm_03_joint_05">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="arm_03_joint_06">
+  <selfCollide>true</selfCollide>
+</gazebo> -->
+
+</robot>
