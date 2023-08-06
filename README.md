@@ -7,7 +7,7 @@ Private Github repository for Individual Research Project
 mkdir -p test3_ws/src
 cd test3_ws/src
 catkin_init_workspace
-git clone https://github.com/sairajdillikar/IRP-Temp.git
+git clone https://github.com/sairajdillikar/Motion_Planning_and_Control_of_Multi_Arm_Robot_for_In_Orbit_Operations.git
 cd ..
 catkin build
 ````
