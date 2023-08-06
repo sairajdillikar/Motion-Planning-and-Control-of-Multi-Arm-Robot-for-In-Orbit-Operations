@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+    
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- <include>
+      <uri>model://ground_plane</uri>
+    </include> -->
+
+    <gravity>0 0 0</gravity>
+    
+        
+    <!-- <include>
+      <uri>model://cube_fixed</uri>
+      <uri>/home/peraspera/test_ws/src/simplified_df_bot_description/models/my_cube_model/model.sdf</uri>
+
+      <pose>0 0 1 0 0 0</pose>
+      <static>false</static>
+    </include> -->
+
+
+    <scene>
+      <ambient>0 0 0 1</ambient>
+      <background>0 0 0 1</background>
+      <shadows>false</shadows>
+    </scene>
+
+    <!-- A gazebo links attacher -->
+    <plugin name="ros_link_attacher_plugin" filename="libgazebo_ros_link_attacher.so"/>
+    
+  </world>
+
+</sdf>

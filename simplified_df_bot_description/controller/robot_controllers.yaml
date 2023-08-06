@@ -1,0 +1,68 @@
+Arm_1_controller:
+  type: position_controllers/JointTrajectoryController
+  joints: 
+      - arm_01_joint_06
+      - arm_01_joint_05
+      - arm_01_joint_04
+      - arm_01_joint_03
+      - arm_01_joint_02
+      - arm_01_joint_01
+  constraints:
+      goal_time: 0.6
+      stopped_velocity_tolerance: 0.5
+  # stop_trajectory_duration: 3.0
+  state_publish_rate:  25
+  action_monitor_rate: 25
+  gains:
+        arm_01_joint_06: {p: 100.0, i: 0.01, d: 10.0}
+        arm_01_joint_05: {p: 100.0, i: 0.01, d: 10.0}
+        arm_01_joint_04: {p: 100.0, i: 0.01, d: 10.0}
+        arm_01_joint_03: {p: 100.0, i: 0.01, d: 10.0}
+        arm_01_joint_02: {p: 100.0, i: 0.01, d: 10.0}
+        arm_01_joint_01: {p: 100.0, i: 0.01, d: 10.0}
+
+Arm_2_controller:
+  type: position_controllers/JointTrajectoryController
+  joints: 
+      - arm_02_joint_06
+      - arm_02_joint_05
+      - arm_02_joint_04
+      - arm_02_joint_03
+      - arm_02_joint_02
+      - arm_02_joint_01
+  constraints:
+      goal_time: 0.6
+      stopped_velocity_tolerance: 0.5
+  # stop_trajectory_duration: 3.0
+  state_publish_rate:  25
+  action_monitor_rate: 25
+  gains:
+        arm_02_joint_06: {p: 100.0, i: 0.01, d: 10.0}
+        arm_02_joint_05: {p: 100.0, i: 0.01, d: 10.0}
+        arm_02_joint_04: {p: 100.0, i: 0.01, d: 10.0}
+        arm_02_joint_03: {p: 100.0, i: 0.01, d: 10.0}
+        arm_02_joint_02: {p: 100.0, i: 0.01, d: 10.0}
+        arm_02_joint_01: {p: 100.0, i: 0.01, d: 10.0}
+
+Arm_3_controller:
+  type: position_controllers/JointTrajectoryController
+  joints: 
+      - arm_03_joint_06
+      - arm_03_joint_05
+      - arm_03_joint_04
+      - arm_03_joint_03
+      - arm_03_joint_02
+      - arm_03_joint_01
+  constraints:
+      goal_time: 0.6
+      stopped_velocity_tolerance: 0.5
+  # stop_trajectory_duration: 3.0
+  state_publish_rate:  25
+  action_monitor_rate: 25
+  gains:
+        arm_03_joint_06: {p: 100.0, i: 0.01, d: 10.0}
+        arm_03_joint_05: {p: 100.0, i: 0.01, d: 10.0}
+        arm_03_joint_04: {p: 100.0, i: 0.01, d: 10.0}
+        arm_03_joint_03: {p: 100.0, i: 0.01, d: 10.0}
+        arm_03_joint_02: {p: 100.0, i: 0.01, d: 10.0}
+        arm_03_joint_01: {p: 100.0, i: 0.01, d: 10.0}
