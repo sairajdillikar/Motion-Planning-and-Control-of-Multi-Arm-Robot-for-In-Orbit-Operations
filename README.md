@@ -20,14 +20,8 @@ Before launching the gazebo world, navigate through the packages to find the `sr
 
 # Launch the Gazebo Environment
 
-    cd test3_ws
-    source devel/setup.bash
-    roslaunch simplified_df_bot_description app.launch
-
-# Run the demo
-
-In another shell, make sure to do `source devel/setup.bash` of your workspace.
+## To run the combined locomotion (both horizontal and vertical).
 
     cd test3_ws
     source devel/setup.bash
-    rosrun simplified_df_bot_description moveit_demo3
+    roslaunch simplified_df_bot_description execute_combined_locomotion.launch
