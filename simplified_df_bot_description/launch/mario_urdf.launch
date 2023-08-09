@@ -1,0 +1,100 @@
+<launch>
+    <arg name="arg_x" default="0.00" />
+    <arg name="arg_y" default="0.00" />
+    <arg name="arg_z" default="0.00" />
+    <arg name="arg_R" default="0.00" />
+    <arg name="arg_P" default="0.00" />
+    <arg name="arg_Y" default="0.00" />
+    
+    <arg name="limited" default="false"/>
+    <arg name="paused" default="true"/>
+    <arg name="gui" default="true"/>
+
+    <!--spawn an empty gazebo world-->
+    <!-- <include file="$(find gazebo_ros)/launch/empty_world.launch" /> -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" default="worlds/empty.world"/>
+        <arg name="paused" value="$(arg paused)"/>
+        <arg name="gui" value="$(arg gui)"/>
+        <arg name="verbose" value="true"/>
+        <arg name="use_sim_time" value="true"/>
+        <arg name="headless" value="false"/>
+        <arg name="debug" value="false"/>
+    </include>
+
+    <!--spawn model-->
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-x $(arg arg_x) -y $(arg arg_y) -z $(arg arg_z) -Y $(arg arg_Y) 
+    -param robot_description -urdf -model simplified_df_bot 
+    -J arm_01_joint_01 0.0 -J arm_01_joint_02 0.0 -J arm_01_joint_03 0.0 -J arm_01_joint_04 0.0 -J arm_01_joint_05 0.0 -J arm_01_joint_06 0.0 
+    -J arm_02_joint_01 0.0 -J arm_02_joint_02 0.0 -J arm_02_joint_03 0.0 -J arm_02_joint_04 0.0 -J arm_02_joint_05 0.0 -J arm_02_joint_06 0.0 
+    -J arm_03_joint_01 0.0 -J arm_03_joint_02 0.0 -J arm_03_joint_03 0.0 -J arm_03_joint_04 0.0 -J arm_03_joint_05 0.0 -J arm_03_joint_06 0.0 
+    -unpause" respawn="false" output="screen" />
+
+    <include file="$(find simplified_df_bot_description)/launch/controller_utils.launch"/>
+
+    <!-- spawn controllers -->
+    <rosparam file="$(find simplified_df_bot_description)/controller/robot_controllers.yaml" command="load"/>
+    <node name="Arm1_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn Arm_1_controller" respawn="false" output="screen"/>
+    <node name="Arm2_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn Arm_2_controller" respawn="false" output="screen"/>
+    <node name="Arm3_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn Arm_3_controller" respawn="false" output="screen"/>
+
+
+
+
+
+
+
+
+    <!--Urdf file path-->
+    <!-- <param name="robot_description" textfile="$(find Your_package_name)/urdf/urdf_file_name.urdf"/> -->
+    <param name="robot_description" command="$(find xacro)/xacro $(find simplified_df_bot_description)/urdf/simplified_df_bot.xacro"/>
+  
+   
+
+    <node name="tf_footprint_base" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0
+    base_link base_footprint 40" />
+    
+
+    <!--Load and launch the joint trajectory controller-->
+    <!-- <rosparam file ="$(find Your_package_name)/config/Your_arm_trajectory_contoller_file_name.yaml" command="load"/> -->
+    <!-- <node name= "controller_spawner" pkg= "controller_manager" type="spawner" respawn="false" output="screen" args="joint_state_controller arm1_joint_trajectory_controller arm2_joint_trajectory_controller arm3_joint_trajectory_controller "/> -->
+    <!-- arm_01_joint_01_position_controller arm_01_joint_03_position_controller arm_01_joint_04_position_controller arm_01_joint_05_position_controller arm_01_joint_06_position_controller arm_01_joint_02_position_controller -->
+   
+    <rosparam file="$(find simplified_df_bot_description)/launch/controller_joints.yaml" command="load"/>
+    <node name= "controller_spawner_joints" pkg= "controller_manager" type="spawner" respawn="false" output="screen" args="joint_state_controller 
+    arm_01_joint_01_position_controller arm_01_joint_03_position_controller arm_01_joint_04_position_controller arm_01_joint_05_position_controller arm_01_joint_06_position_controller arm_01_joint_02_position_controller
+    arm_02_joint_01_position_controller arm_02_joint_02_position_controller arm_02_joint_03_position_controller arm_02_joint_04_position_controller arm_02_joint_05_position_controller arm_02_joint_06_position_controller 
+    arm_03_joint_01_position_controller arm_03_joint_02_position_controller arm_03_joint_03_position_controller arm_03_joint_04_position_controller arm_03_joint_05_position_controller arm_03_joint_06_position_controller"/>
+
+<!-- src/simplified_df_bot_description/launch/mario_urdf.launch -->
+
+    <!-- <rosparam file="$(find simplified_df_bot_description)/launch/controller_groups.yaml" command="load"/>
+    <node name= "controller_spawner_groups" pkg= "controller_manager" type="spawner" respawn="false" output="screen" args="joint_state_controller arm1_joint_trajectory_controller arm2_joint_trajectory_controller arm3_joint_trajectory_controller "/>
+     -->
+    
+    <!-- <node name= "controller_spawner" pkg= "controller_manager" type="spawner" respawn="false" output="screen" args="arm_01_joint_01_position_controller arm_01_joint_03_position_controller arm_01_joint_04_position_controller arm_01_joint_05_position_controller arm_01_joint_06_position_controller arm_01_joint_02_position_controller"/>  -->  
+    <!-- <node name= "controller_spawner" pkg= "controller_manager" type="spawner" respawn="false" output="screen" args="joint_state_controller all_joint_trajectory_controller"/> -->
+    <!-- <node name= "controller_spawner" pkg= "controller_manager" type="spawner" respawn="false" output="screen" ns="/simplified_df_bot_controller" args="simplified_df_bot_controller"/> -->
+    <!-- <node name= "controller_spawner" pkg= "controller_manager" type="spawner" respawn="false" output="screen" args=" joint_state_controller arm_02_joint_01_position_controller arm_02_joint_02_position_controller arm_02_joint_03_position_controller arm_02_joint_04_position_controller arm_02_joint_05_position_controller arm_02_joint_06_position_controller "/> -->
+    <!-- arm_01_joint_01_position_controller arm_01_joint_03_position_controller arm_01_joint_04_position_controller arm_01_joint_05_position_controller arm_01_joint_06_position_controller arm_01_joint_02_position_controller arm_03_joint_01_position_controller arm_03_joint_02_position_controller arm_03_joint_03_position_controller arm_03_joint_04_position_controller arm_03_joint_05_position_controller arm_03_joint_06_position_controller  -->
+    <!-- <node name= "controller_spawner" pkg= "controller_manager" type="spawner" respawn="false" output="screen" args=" joint_state_controller arm_01_position_controller arm_02_position_controller arm_03_position_controller"/> -->
+    <!-- <node name= "controller_spawner" pkg= "controller_manager" type="spawner" respawn="false" output="screen" ns="/simplified_df_bot_controller" args=" joint_state_controller arm_01_position_controller"/> -->
+
+
+
+
+    <!-- Delay before homing the arm -->
+    <arg name="start_delay_seconds" default="10"/>
+
+
+
+    <!-- Robot State Publisher for TF of each joint: publishes all the current states of the joint, then RViz can visualize -->
+    <!-- <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen"/> -->
+    
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen"/>
+        <!-- <remap from="robot_description" to="robot_description"/> -->
+        <!-- <remap from="/joint_states" to="/simplified_df_bot_controller/joint_states"/> -->
+    <!-- </node> -->
+
+
+</launch>

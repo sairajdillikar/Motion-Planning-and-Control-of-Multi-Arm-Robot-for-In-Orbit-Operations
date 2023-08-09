@@ -1,0 +1,77 @@
+<launch>
+  <!-- <param name="robot_description" command="$(find xacro)/xacro $(find simplified_df_bot_description)/urdf/simplified_df_bot.xacro"/>
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model simplified_df_bot"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="true"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include> -->
+
+  <!-- for vertical motion -->
+  <!-- <arg name="arg_x" default="0.065652" />  
+  <arg name="arg_y" default="-0.145235" />
+  <arg name="arg_z" default="0.3925" /> -->
+
+
+
+  <!-- for horizontal motion 1-->
+  <!-- <arg name="arg_x" default="0.00" />
+  <arg name="arg_y" default="0.00" />
+  <arg name="arg_z" default="0.00" />
+  
+  <arg name="arg_R" default="0.00" />
+  <arg name="arg_P" default="0.00" />
+  <arg name="arg_Y" default="0.00" />
+  
+  <arg name="limited" default="false"/>
+  <arg name="paused" default="true"/>
+  <arg name="gui" default="true"/> -->
+
+  <!-- for combined motion 2-->
+  <arg name="arg_x" default="0.00" />
+  <arg name="arg_y" default="-0.780" />
+  <arg name="arg_z" default="0.00" />
+  
+  <arg name="arg_R" default="0.00" />
+  <arg name="arg_P" default="0.00" />
+  <arg name="arg_Y" default="-0.531643" />
+  
+
+
+
+  <arg name="limited" default="false"/>
+  <arg name="paused" default="true"/>
+  <arg name="gui" default="true"/>
+
+  <!--spawn an empty gazebo world-->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" default="$(find simplified_df_bot_description)/worlds/main_world.world"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="verbose" value="true"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <!--spawn model-->
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-x $(arg arg_x) -y $(arg arg_y) -z $(arg arg_z) -Y $(arg arg_Y) 
+  -param robot_description -urdf -model simplified_df_bot 
+  -J arm_01_joint_01 0.0 -J arm_01_joint_02 0.0 -J arm_01_joint_03 0.0 -J arm_01_joint_04 0.0 -J arm_01_joint_05 0.0 -J arm_01_joint_06 0.0 
+  -J arm_02_joint_01 0.0 -J arm_02_joint_02 0.0 -J arm_02_joint_03 0.0 -J arm_02_joint_04 0.0 -J arm_02_joint_05 0.0 -J arm_02_joint_06 0.0 
+  -J arm_03_joint_01 0.0 -J arm_03_joint_02 0.0 -J arm_03_joint_03 0.0 -J arm_03_joint_04 0.0 -J arm_03_joint_05 0.0 -J arm_03_joint_06 0.0 
+  -unpause" respawn="false" output="screen" />
+
+  <include file="$(find simplified_df_bot_description)/launch/controller_utils.launch"/>
+
+  <!-- spawn controllers -->
+  <rosparam file="$(find simplified_df_bot_description)/controller/robot_controllers.yaml" command="load"/>
+  <node name="Arm1_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn Arm_1_controller" respawn="false" output="screen"/>
+  <node name="Arm2_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn Arm_2_controller" respawn="false" output="screen"/>
+  <node name="Arm3_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn Arm_3_controller" respawn="false" output="screen"/>
+
+
+
+</launch>
