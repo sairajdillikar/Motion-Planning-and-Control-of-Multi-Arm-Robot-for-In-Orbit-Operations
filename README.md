@@ -20,7 +20,19 @@ Before launching the gazebo world, navigate through the packages to find the `sr
 
 # Launch the Gazebo Environment
 
-## To run the combined locomotion (both horizontal and vertical).
+## Horizontal locomotion.
+
+    cd test3_ws
+    source devel/setup.bash
+    roslaunch simplified_df_bot_description execute_combined_locomotion.launch
+
+## Vertical locomotion.
+
+    cd test3_ws
+    source devel/setup.bash
+    roslaunch simplified_df_bot_description execute_combined_locomotion.launch
+
+## Combined locomotion (both horizontal and vertical).
 
     cd test3_ws
     source devel/setup.bash
