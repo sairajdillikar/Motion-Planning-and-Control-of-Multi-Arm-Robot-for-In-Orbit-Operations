@@ -14,7 +14,7 @@ catkin build
 
 # Modifications to be made in the SRS spawning package
 
-Before launching the gazebo world, navigate through the packages to find the `src/simplified_df_bot_description/src/moveit_demo3.cpp` file and make sure to add your PC Username within the `<uri>` tag.
+Before launching the gazebo world, navigate through the packages to find the `src/simplified_df_bot_description/src/exe_horizontal_coordmotion_1.cpp` file and make sure to add your PC Username within the `<uri>` tag. Same goes for the `src/exe_vertical_coordmotion_1.cpp` and `exe_combined_coordmotion_1.cpp`
 
     <uri>/home/ $USERNAME /test3_ws/src/srs_modules_description/meshes/base_link.stl</uri>
 
