@@ -21,13 +21,13 @@ Before launching the gazebo world, navigate through the packages to find the `sr
 
 # Launch the Gazebo Environment
 
-## Horizontal locomotion.
+## Serial locomotion.
 
     cd test3_ws
     source devel/setup.bash
     roslaunch simplified_df_bot_description execute_combined_locomotion.launch
 
-## Vertical locomotion.
+## Parallel locomotion.
 
     cd test3_ws
     source devel/setup.bash
