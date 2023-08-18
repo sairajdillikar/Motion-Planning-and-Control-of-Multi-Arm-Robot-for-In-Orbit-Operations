@@ -22,45 +22,26 @@ Before launching the gazebo world, navigate through the packages to find the `sr
 
 # Launch the Gazebo Environment
 
-## Serial locomotion.
+## Execute Serial locomotion.
+
+    cd mario_mpcc_ws
+    source devel/setup.bash
+    roslaunch simplified_df_bot_description execute_serial_locomotion.launch
+    rosrun simplified_df_bot_description exe_serial_coordmotion_1
+
+## Execute Parallel locomotion.
+
+    cd mario_mpcc_ws
+    source devel/setup.bash
+    roslaunch simplified_df_bot_description execute_parallel_locomotion.launch
+    rosrun simplified_df_bot_description exe_parallel_coordmotion_1
+
+## Execute Combined locomotion (both serial and parallel).
 
     cd mario_mpcc_ws
     source devel/setup.bash
     roslaunch simplified_df_bot_description execute_combined_locomotion.launch
-
-## Parallel locomotion.
-
-    cd mario_mpcc_ws
-    source devel/setup.bash
-    roslaunch simplified_df_bot_description execute_combined_locomotion.launch
-
-## Combined locomotion (both serial and parallel).
-
-    cd mario_mpcc_ws
-    source devel/setup.bash
-    roslaunch simplified_df_bot_description execute_combined_locomotion.launch
+    rosrun simplified_df_bot_description exe_combined_coordmotion_1
 
 
 
-
-
-# dual_arm_demo
-
-![dual arm](https://github.com/bi3ri/dual_arm_demo/blob/main/dual_arm_demo.gif?raw=true)
-
-Small demo project planning and executing random poses for two UR robots simultaneously. 
-
-Tested successfully under noetic.
-
-## Installation
-```bash
-mkdir -p ~/dual_arm_ws/src
-cd ~/dual_arm_ws/src
-git clone https://github.com/bi3ri/dual_arm_demo.git
-git submodule update --init --recursive
-catkin build && source ~/dual_arm_ws/devel/setup.bash
-
-#run in two shells
-roslaunch dual_arm_demo app.launch 
-rosrun dual_arm_demo moveit_demo
-```
