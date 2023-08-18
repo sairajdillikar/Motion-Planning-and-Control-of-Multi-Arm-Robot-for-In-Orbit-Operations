@@ -42,6 +42,3 @@ Before launching the gazebo world, navigate through the packages to find the `sr
     source devel/setup.bash
     roslaunch simplified_df_bot_description execute_combined_locomotion.launch
     rosrun simplified_df_bot_description exe_combined_coordmotion_1
-
-
-
