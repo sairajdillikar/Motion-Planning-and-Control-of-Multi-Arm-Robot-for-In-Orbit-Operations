@@ -22,12 +22,19 @@ Before launching the gazebo world, navigate through the packages to find the `sr
 
 # Launch the Gazebo Environment
 
-## Execute Serial locomotion.
+## Execute Serial (a) locomotion.
 
     cd mario_mpcc_ws
     source devel/setup.bash
     roslaunch simplified_df_bot_description execute_serial_locomotion.launch
     rosrun simplified_df_bot_description exe_serial_coordmotion_1
+
+## Execute Serial (b) locomotion.
+
+    cd mario_mpcc_ws
+    source devel/setup.bash
+    roslaunch simplified_df_bot_description execute_serial_locomotion.launch
+    rosrun simplified_df_bot_description exe_serial_coordmotion_2
 
 ## Execute Parallel locomotion.
 
