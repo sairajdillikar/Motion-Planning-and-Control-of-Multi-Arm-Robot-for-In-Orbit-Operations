@@ -49,3 +49,23 @@ Before launching the gazebo world, navigate through the packages to find the `sr
     source devel/setup.bash
     roslaunch simplified_df_bot_description execute_combined_locomotion.launch
     rosrun simplified_df_bot_description exe_combined_coordmotion_1
+
+
+## Citation
+
+If you use IKPy as part of a publication, please use the Bibtex below as a citation:
+
+```bibtex
+@software{dillikar_sairaj_2023,
+  author       = {Dillikar, Sairaj},
+  title        = {Motion Planning and Control of Multi-Arm Robot for In-Orbit Operations},
+  month        = Sep,
+  year         = 2023,
+  note         = {{If you use this software, please cite it using the 
+                   metadata from this file.}},
+  publisher    = {Zenodo??},
+  version      = {},
+  doi          = {},
+  url          = {https://github.com/Phylliade/ikpy/blob/master/README.md} from this repository you can refer for citation of softwares
+}
+```
