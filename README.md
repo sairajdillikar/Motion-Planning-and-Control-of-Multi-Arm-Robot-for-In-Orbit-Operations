@@ -53,7 +53,7 @@ Before launching the gazebo world, navigate through the packages to find the `sr
 
 ## Citation
 
-If you use IKPy as part of a publication, please use the Bibtex below as a citation:
+If you use the Motion Planning architecture as part of a publication, please use the Bibtex below as a citation:
 
 ```bibtex
 @software{dillikar_sairaj_2023,
