@@ -1,7 +1,8 @@
 # Motion Planning and Control of Multi-Arm Robot for In-Orbit Operations
 A ROS-based simulation showcasing the motion planning and control framework for a multi-manipulator system for in-orbit operations.
 
-Developed as part of MSc thesis titled "Motion Planning and Control of Multi-Arm Robot for In-Orbit Operations" by ```Sairaj R Dillikar (MSc Robotics 2022-23, Cranfield University, United Kingdom)```
+Developed as part of MSc thesis titled "Motion Planning and Control of Multi-Arm Robot for In-Orbit Operations" 
+by ```Sairaj R Dillikar (MSc Robotics 2022-23, Cranfield University, United Kingdom)```
 
 # Build the Package
 
