@@ -57,15 +57,12 @@ If you use the Motion Planning architecture as part of a publication, please use
 
 ```bibtex
 @software{dillikar_sairaj_2023,
-  author       = {Dillikar, Sairaj},
+  author       = {Dillikar, Sairaj.R.},
   title        = {Motion Planning and Control of Multi-Arm Robot for In-Orbit Operations},
   month        = Sep,
   year         = 2023,
-  note         = {{If you use this software, please cite it using the 
+  note         = {{If you use this package, please cite it using the 
                    metadata from this file.}},
-  publisher    = {Zenodo??},
-  version      = {},
-  doi          = {},
-  url          = {https://github.com/Phylliade/ikpy/blob/master/README.md} from this repository you can refer for citation of softwares
+  url          = {https://github.com/sairajdillikar/Motion-Planning-and-Control-of-Multi-Arm-Robot-for-In-Orbit-Operations}
 }
 ```
