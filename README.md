@@ -41,12 +41,16 @@ Before launching the gazebo world, navigate through the packages to find the `sr
     roslaunch simplified_df_bot_description execute_serial_locomotion.launch
     rosrun simplified_df_bot_description exe_serial_coordmotion_2
 
+![Serial (b) locomotion](resources/serial_motion_2.gif)
+
 ## Execute Parallel locomotion.
 
     cd mario_mpcc_ws
     source devel/setup.bash
     roslaunch simplified_df_bot_description execute_parallel_locomotion.launch
     rosrun simplified_df_bot_description exe_parallel_coordmotion_1
+
+![Parallel locomotion](resources/parallel_motion_1.gif)
 
 ## Execute Combined locomotion (both serial and parallel).
 
@@ -55,6 +59,7 @@ Before launching the gazebo world, navigate through the packages to find the `sr
     roslaunch simplified_df_bot_description execute_combined_locomotion.launch
     rosrun simplified_df_bot_description exe_combined_coordmotion_1
 
+![Combined locomotion (both serial and parallel)](resources/combined_coord.gif)
 
 ## Citation
 
