@@ -32,7 +32,7 @@ Before launching the gazebo world, navigate through the packages to find the `sr
     roslaunch simplified_df_bot_description execute_serial_locomotion.launch
     rosrun simplified_df_bot_description exe_serial_coordmotion_1
 
-![gazebo screenshot](ss.png)
+![Serial (a) locomotion](resources/serial_motion_1.mp4)
 
 ## Execute Serial (b) locomotion.
 
