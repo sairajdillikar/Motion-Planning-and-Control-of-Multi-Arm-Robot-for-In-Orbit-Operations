@@ -32,8 +32,6 @@ Before launching the gazebo world, navigate through the packages to find the `sr
     roslaunch simplified_df_bot_description execute_serial_locomotion.launch
     rosrun simplified_df_bot_description exe_serial_coordmotion_1
 
-![Serial (a) locomotion](https://github.com/sairajdillikar/Motion-Planning-and-Control-of-Multi-Arm-Robot-for-In-Orbit-Operations/assets/54501791/a1364cc4-3b15-48ac-a51b-e3cc98138d02)
-
 ## Execute Serial (b) locomotion.
 
     cd mario_mpcc_ws
