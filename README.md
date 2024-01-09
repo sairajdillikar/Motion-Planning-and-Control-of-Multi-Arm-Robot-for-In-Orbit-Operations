@@ -56,16 +56,20 @@ Before launching the gazebo world, navigate through the packages to find the `sr
 
 ## Citation
 
-If you use the Motion Planning architecture as part of a publication, please use the Bibtex below as a citation:
-
+If you use the Motion Planning architecture as part of a publication or utilise in a project development, please use the Bibtex below as a citation:
+Repository:
 ```bibtex
-@software{dillikar_sairaj_2023,
+@misc{motion_planning_mario,
   author       = {Dillikar, Sairaj.R.},
+  booktitle = {GitHub repository},
+  publisher = {GitHub},
   title        = {Motion Planning and Control of Multi-Arm Robot for In-Orbit Operations},
-  month        = Sep,
-  year         = 2023,
-  note         = {{If you use this package, please cite it using the 
-                   metadata from this file.}},
+  month        = {Sep},
+  year         = {2023},
   url          = {https://github.com/sairajdillikar/Motion-Planning-and-Control-of-Multi-Arm-Robot-for-In-Orbit-Operations}
 }
 ```
+
+## Contact
+
+For questions, suggestions, or collaborations, feel free to reach out to the project author at [sairaj.dillikar.102@gmail.com](mailto:sairaj.dillikar.102@gmail.com).
