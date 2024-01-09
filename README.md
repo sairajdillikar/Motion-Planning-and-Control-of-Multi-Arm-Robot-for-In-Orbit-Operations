@@ -61,8 +61,8 @@ Repository:
 ```bibtex
 @misc{motion_planning_mario,
   author       = {Dillikar, Sairaj.R.},
-  booktitle = {GitHub repository},
-  publisher = {GitHub},
+  booktitle    = {GitHub repository},
+  publisher    = {GitHub},
   title        = {Motion Planning and Control of Multi-Arm Robot for In-Orbit Operations},
   month        = {Sep},
   year         = {2023},
