@@ -59,7 +59,7 @@ Before launching the gazebo world, navigate through the packages to find the `sr
     roslaunch simplified_df_bot_description execute_combined_locomotion.launch
     rosrun simplified_df_bot_description exe_combined_coordmotion_1
 
-![Combined locomotion (both serial and parallel)](resources/combined_coord1.gif)
+![Combined locomotion (both serial and parallel)](resources/combined_coord.gif)
 
 ## Citation
 
