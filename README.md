@@ -56,7 +56,8 @@ Before launching the gazebo world, navigate through the packages to find the `sr
 
 ## Citation
 
-If you use the Motion Planning architecture as part of a publication or utilise in a project development, please use the Bibtex below as a citation:
+If you use the Motion Planning architecture as part of a publication or utilise in a project development, please use the Bibtex below as a citation,
+
 Repository:
 ```bibtex
 @misc{motion_planning_mario,
