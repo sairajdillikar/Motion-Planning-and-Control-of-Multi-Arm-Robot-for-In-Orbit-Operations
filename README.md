@@ -33,6 +33,7 @@ Before launching the gazebo world, navigate through the packages to find the `sr
     rosrun simplified_df_bot_description exe_serial_coordmotion_1
 
 ![Serial (a) locomotion](resources/serial_motion_1.mp4)
+https://github.com/sairajdillikar/Motion-Planning-and-Control-of-Multi-Arm-Robot-for-In-Orbit-Operations/assets/54501791/a1364cc4-3b15-48ac-a51b-e3cc98138d02
 
 ## Execute Serial (b) locomotion.
 
