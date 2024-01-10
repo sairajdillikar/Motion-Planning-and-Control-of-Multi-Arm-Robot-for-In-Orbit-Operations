@@ -15,7 +15,7 @@ by ```Sairaj R Dillikar (MSc Robotics 2022-23, Cranfield University, United King
     - [Execute Parallel locomotion:](#execute-parallel-locomotion)
     - [Execute Combined locomotion (both serial and parallel):](#execute-combined-locomotion-both-serial-and-parallel)
 - [Citation](#citation)
-    - [Repository:](#Repository)
+    - [Repository:](#repository)
 - [Contact](#contact)
 
 ## Build the Package
