@@ -6,7 +6,7 @@ by ```Sairaj R Dillikar (MSc Robotics 2022-23, Cranfield University, United King
 
 ## Table of Contents
 
-- [Build the Package](build-the-package)
+- [Build the Package](#build-the-package)
 
 ## Build the Package
 
