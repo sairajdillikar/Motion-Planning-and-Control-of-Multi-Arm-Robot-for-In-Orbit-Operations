@@ -29,7 +29,7 @@ cd ..
 catkin build
 ````
 
-## Requirements
+### Requirements
 
 - [Ubuntu 2020.04](https://releases.ubuntu.com/focal/)
 - [ROS Noetic Ninjemys 8](https://wiki.ros.org/noetic)
@@ -65,7 +65,7 @@ Before launching the gazebo world, navigate through the packages to find the `sr
 
 ![Serial (b) locomotion](resources/serial_motion_2.gif)
 
-## Execute Parallel locomotion:
+### Execute Parallel locomotion:
 
     cd mario_mpcc_ws
     source devel/setup.bash
@@ -74,7 +74,7 @@ Before launching the gazebo world, navigate through the packages to find the `sr
 
 ![Parallel locomotion](resources/parallel_motion_1.gif)
 
-## Execute Combined locomotion (both serial and parallel):
+### Execute Combined locomotion (both serial and parallel):
 
     cd mario_mpcc_ws
     source devel/setup.bash
@@ -87,7 +87,7 @@ Before launching the gazebo world, navigate through the packages to find the `sr
 
 If you use the Motion Planning architecture as part of a publication or utilise in a project development, please use the Bibtex below as a citation,
 
-## Repository:
+### Repository:
 ```bibtex
 @misc{motion_planning_mario,
   author       = {Dillikar, Sairaj.R.},
