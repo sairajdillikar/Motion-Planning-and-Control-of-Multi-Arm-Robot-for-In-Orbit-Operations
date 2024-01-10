@@ -36,6 +36,7 @@ catkin build
 - [Ubuntu 2020.04](https://releases.ubuntu.com/focal/)
 - [ROS Noetic Ninjemys 8](https://wiki.ros.org/noetic)
 - [Gazebo v11.11](https://classic.gazebosim.org/tutorials?tut=ros_installing&cat=connect_ros)
+- [Moveit! 1.0](https://moveit.ros.org/install/) for ROS Neotic
 - [Python 3.7](https://www.python.org/downloads/release/python-370/)
 - [*ros_link_attacher*](https://github.com/pal-robotics/gazebo_ros_link_attacher) Plugin (already included within this repository ([gazebo_ros_link_attacher](gazebo_ros_link_attacher)))
 
