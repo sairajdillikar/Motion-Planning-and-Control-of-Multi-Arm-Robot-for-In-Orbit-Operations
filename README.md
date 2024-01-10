@@ -4,7 +4,11 @@ A ROS-based simulation showcasing the motion planning and control framework for 
 Developed as part of MSc thesis titled "Motion Planning and Control of Multi-Arm Robot for In-Orbit Operations" 
 by ```Sairaj R Dillikar (MSc Robotics 2022-23, Cranfield University, United Kingdom)```
 
-# Build the Package
+## Table of Contents
+
+- [Build the Package](Build-the-Package)
+
+## Build the Package
 
 ````
 mkdir -p mario_mpcc_ws/src
