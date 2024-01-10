@@ -31,7 +31,7 @@ Before launching the gazebo world, navigate through the packages to find the `sr
     <uri>/home/ $USERNAME /mario_mpcc_ws/src/srs_modules_description/meshes/base_link.stl</uri>
 
 
-# Launch the Gazebo Environment
+# Launch the Simulation
 
 ## Execute Serial (a) locomotion.
 
