@@ -54,7 +54,9 @@ Before launching a simulation, any new terminal must be always sourced with,
     cd mario_mpcc_ws
     source devel/setup.bash
 
-Use the above two commands for a launching a new terminal, as executing simulation for each different locomotion requires only two main commands: 1. For launching the simulation. 2. To run the script with its respective control algorithm
+Use the above two commands for a launching a new terminal, as executing simulation for each different locomotion requires only two main commands: 
+1. For launching the simulation.
+2. 2. To run the script with its respective control algorithm.
 
 ### Execute Serial (a) Locomotion:
 
