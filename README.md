@@ -7,6 +7,16 @@ by ```Sairaj R Dillikar (MSc Robotics 2022-23, Cranfield University, United King
 ## Table of Contents
 
 - [Build the Package](#build-the-package)
+    - [Requirements](#requirements)
+    - [Modifications to be made in the SRS spawning package](#modifications-to-be-made-in-the-srs-spawning-package)
+- [Launch the Simulation](#launch-the-simulation)
+    - [Execute Serial (a) locomotion:](#execute-serial-(a)-locomotion:)
+    - [Execute Serial (b) locomotion:](#execute-serial-(b)-locomotion:)
+    - [Execute Parallel locomotion:](#execute-parallel-locomotion:)
+    - [Execute Combined locomotion (both serial and parallel):](#execute-combined-locomotion-(both-serial-and-parallel):)
+- [Citation](#citation)
+    - [Repository:](#Repository:)
+- [Contact](#contact)
 
 ## Build the Package
 
@@ -27,7 +37,7 @@ catkin build
 - [Python 3.7](https://www.python.org/downloads/release/python-370/)
 - [`ros_link_attacher`](https://github.com/pal-robotics/gazebo_ros_link_attacher) pkg (already included within this repository!)
 
-# Modifications to be made in the SRS spawning package
+## Modifications to be made in the SRS spawning package
 
 Before launching the gazebo world, navigate through the packages to find the `src/simplified_df_bot_description/src/exe_serial_coordmotion_1.cpp` file and make sure to add your PC `$USERNAME` within the `<uri>` tag. Same goes for the `src/exe_serial_coordmotion_2.cpp`, `src/exe_parallel_coordmotion_1.cpp`, and `src/exe_combined_coordmotion_1.cpp`
 
@@ -35,9 +45,9 @@ Before launching the gazebo world, navigate through the packages to find the `sr
     <uri>/home/ $USERNAME /mario_mpcc_ws/src/srs_modules_description/meshes/base_link.stl</uri>
 
 
-# Launch the Simulation
+## Launch the Simulation
 
-## Execute Serial (a) locomotion.
+## Execute Serial (a) locomotion:
 
     cd mario_mpcc_ws
     source devel/setup.bash
@@ -46,7 +56,7 @@ Before launching the gazebo world, navigate through the packages to find the `sr
 
 ![Serial (a) locomotion](resources/serial_motion_1.gif)
 
-## Execute Serial (b) locomotion.
+## Execute Serial (b) locomotion:
 
     cd mario_mpcc_ws
     source devel/setup.bash
@@ -55,7 +65,7 @@ Before launching the gazebo world, navigate through the packages to find the `sr
 
 ![Serial (b) locomotion](resources/serial_motion_2.gif)
 
-## Execute Parallel locomotion.
+## Execute Parallel locomotion:
 
     cd mario_mpcc_ws
     source devel/setup.bash
@@ -64,7 +74,7 @@ Before launching the gazebo world, navigate through the packages to find the `sr
 
 ![Parallel locomotion](resources/parallel_motion_1.gif)
 
-## Execute Combined locomotion (both serial and parallel).
+## Execute Combined locomotion (both serial and parallel):
 
     cd mario_mpcc_ws
     source devel/setup.bash
@@ -77,7 +87,7 @@ Before launching the gazebo world, navigate through the packages to find the `sr
 
 If you use the Motion Planning architecture as part of a publication or utilise in a project development, please use the Bibtex below as a citation,
 
-Repository:
+## Repository:
 ```bibtex
 @misc{motion_planning_mario,
   author       = {Dillikar, Sairaj.R.},
