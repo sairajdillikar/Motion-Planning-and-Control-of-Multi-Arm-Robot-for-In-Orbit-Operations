@@ -47,7 +47,7 @@ Before launching the gazebo world, navigate through the packages to find the `sr
 
 ## Launch the Simulation
 
-## Execute Serial (a) locomotion:
+### Execute Serial (a) locomotion:
 
     cd mario_mpcc_ws
     source devel/setup.bash
@@ -56,7 +56,7 @@ Before launching the gazebo world, navigate through the packages to find the `sr
 
 ![Serial (a) locomotion](resources/serial_motion_1.gif)
 
-## Execute Serial (b) locomotion:
+### Execute Serial (b) locomotion:
 
     cd mario_mpcc_ws
     source devel/setup.bash
