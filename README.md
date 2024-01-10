@@ -15,6 +15,10 @@ cd ..
 catkin build
 ````
 
+## Technical Specifications
+
+The hardware utilised was a computer system with an Intel(R) Core\textsuperscript{TM} i7-9750H CPU @ 2.60GHz processor paired with 16 GB RAM and an NVIDIA GeForce GTX 1050 graphics card on Ubuntu 2020.04 platform. Additionally, the project was developed based on Python 3.7 and the simulation was validated through ROS Noetic Ninjemys 8 with Gazebo v11.11.
+
 # Modifications to be made in the SRS spawning package
 
 Before launching the gazebo world, navigate through the packages to find the `src/simplified_df_bot_description/src/exe_serial_coordmotion_1.cpp` file and make sure to add your PC `$USERNAME` within the `<uri>` tag. Same goes for the `src/exe_serial_coordmotion_2.cpp`, `src/exe_parallel_coordmotion_1.cpp`, and `src/exe_combined_coordmotion_1.cpp`
