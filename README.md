@@ -4,6 +4,8 @@ A ROS-Gazebo based simulation showcasing the motion planning and control framewo
 Developed as part of MSc thesis titled "Motion Planning and Control of Multi-Arm Robot for In-Orbit Operations" 
 by ```Sairaj R Dillikar (MSc Robotics 2022-23, Cranfield University, United Kingdom)```
 
+Simulation videos from the playlist can be accessed by clicking [here](https://www.youtube.com/playlist?list=PLEi_ShRz2_TyMdzFCyuWxg0li9Z3WaPb6).
+
 ## Table of Contents
 
 - [Build the Package](#build-the-package)
