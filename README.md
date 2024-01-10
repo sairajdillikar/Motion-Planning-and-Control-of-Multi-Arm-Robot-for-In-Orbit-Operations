@@ -17,10 +17,11 @@ catkin build
 
 ## Requirements
 
-- Ubuntu 2020.04
-- ROS Noetic Ninjemys 8
-- Gazebo v11.11
+- [Ubuntu 2020.04](https://releases.ubuntu.com/focal/)
+- [ROS Noetic Ninjemys 8](https://wiki.ros.org/noetic)
+- [Gazebo v11.11](https://classic.gazebosim.org/tutorials?tut=ros_installing&cat=connect_ros)
 - Python 3.7
+- [`ros_link_attacher`](https://github.com/pal-robotics/gazebo_ros_link_attacher) pkg (already included within this repository!)
 
 # Modifications to be made in the SRS spawning package
 
