@@ -37,7 +37,7 @@ catkin build
 - [ROS Noetic Ninjemys 8](https://wiki.ros.org/noetic)
 - [Gazebo v11.11](https://classic.gazebosim.org/tutorials?tut=ros_installing&cat=connect_ros)
 - [Python 3.7](https://www.python.org/downloads/release/python-370/)
-- [***ros_link_attacher***](https://github.com/pal-robotics/gazebo_ros_link_attacher) Plugin (already included within this repository ([gazebo_ros_link_attacher](gazebo_ros_link_attacher)))
+- [*ros_link_attacher*](https://github.com/pal-robotics/gazebo_ros_link_attacher) Plugin (already included within this repository ([gazebo_ros_link_attacher](gazebo_ros_link_attacher)))
 
 ## Modifications to be made in the SRS Spawning Package
 
@@ -49,38 +49,57 @@ Before launching the gazebo world, navigate through the packages to find the `sr
 
 ## Launch the Simulation
 
-### Execute Serial (a) Locomotion:
+Before launching any simulation, any new terminal must be always sourced with,
 
     cd mario_mpcc_ws
     source devel/setup.bash
+
+Use the above two commands for a launchina a new terminal, as executing simulation for each different locomotion requires only two main commands: 1. For launching the simulation. 2. To run the script with its respective control algorithm
+
+### Execute Serial (a) Locomotion:
+
+Terminal 1:
+
     roslaunch simplified_df_bot_description execute_serial_locomotion.launch
+
+Terminal 2:
+
     rosrun simplified_df_bot_description exe_serial_coordmotion_1
 
 ![Serial (a) Locomotion](resources/serial_motion_1.gif)
 
 ### Execute Serial (b) Locomotion:
 
-    cd mario_mpcc_ws
-    source devel/setup.bash
+Terminal 1:
+
     roslaunch simplified_df_bot_description execute_serial_locomotion.launch
+
+Terminal 2:
+    
     rosrun simplified_df_bot_description exe_serial_coordmotion_2
 
 ![Serial (b) Locomotion](resources/serial_motion_2.gif)
 
 ### Execute Parallel Locomotion:
 
-    cd mario_mpcc_ws
-    source devel/setup.bash
+Terminal 1:
+
     roslaunch simplified_df_bot_description execute_parallel_locomotion.launch
+
+Terminal 2:
+
     rosrun simplified_df_bot_description exe_parallel_coordmotion_1
 
 ![Parallel Locomotion](resources/parallel_motion_1.gif)
 
 ### Execute Combined Locomotion (both Serial and Parallel):
 
-    cd mario_mpcc_ws
-    source devel/setup.bash
+Terminal 1:
+
     roslaunch simplified_df_bot_description execute_combined_locomotion.launch
+
+Terminal 2:
+
     rosrun simplified_df_bot_description exe_combined_coordmotion_1
 
 ![Combined Locomotion (both Serial and Parallel)](resources/combined_coord.gif)
