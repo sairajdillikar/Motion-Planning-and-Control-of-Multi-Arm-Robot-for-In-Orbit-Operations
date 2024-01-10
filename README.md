@@ -55,16 +55,16 @@ Before launching a simulation, any new terminal must be always sourced with,
     source devel/setup.bash
 
 Use the above two commands for a launching a new terminal, as executing simulation for each different locomotion requires only two main commands: 
-1. For launching the simulation.
-2. 2. To run the script with its respective control algorithm.
+1. For launching the simulation (`roslaunch`).
+2. To run the script with its respective control algorithm (`rosrun`).
 
 ### Execute Serial (a) Locomotion:
 
-Terminal 1:
+Terminal-1:
 
     roslaunch simplified_df_bot_description execute_serial_locomotion.launch
 
-Terminal 2:
+Terminal-2:
 
     rosrun simplified_df_bot_description exe_serial_coordmotion_1
 
@@ -72,11 +72,11 @@ Terminal 2:
 
 ### Execute Serial (b) Locomotion:
 
-Terminal 1:
+Terminal-1:
 
     roslaunch simplified_df_bot_description execute_serial_locomotion.launch
 
-Terminal 2:
+Terminal-2:
     
     rosrun simplified_df_bot_description exe_serial_coordmotion_2
 
@@ -84,11 +84,11 @@ Terminal 2:
 
 ### Execute Parallel Locomotion:
 
-Terminal 1:
+Terminal-1:
 
     roslaunch simplified_df_bot_description execute_parallel_locomotion.launch
 
-Terminal 2:
+Terminal-2:
 
     rosrun simplified_df_bot_description exe_parallel_coordmotion_1
 
@@ -96,11 +96,11 @@ Terminal 2:
 
 ### Execute Combined Locomotion (both Serial and Parallel):
 
-Terminal 1:
+Terminal-1:
 
     roslaunch simplified_df_bot_description execute_combined_locomotion.launch
 
-Terminal 2:
+Terminal-2:
 
     rosrun simplified_df_bot_description exe_combined_coordmotion_1
 
