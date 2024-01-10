@@ -10,12 +10,12 @@ by ```Sairaj R Dillikar (MSc Robotics 2022-23, Cranfield University, United King
     - [Requirements](#requirements)
     - [Modifications to be made in the SRS spawning package](#modifications-to-be-made-in-the-srs-spawning-package)
 - [Launch the Simulation](#launch-the-simulation)
-    - [Execute Serial (a) locomotion:](#execute-serial-a-locomotion)
-    - [Execute Serial (b) locomotion:](#execute-serial-b-locomotion)
-    - [Execute Parallel locomotion:](#execute-parallel-locomotion)
-    - [Execute Combined locomotion (both serial and parallel):](#execute-combined-locomotion-both-serial-and-parallel)
+    - [Execute Serial (a) locomotion](#execute-serial-a-locomotion)
+    - [Execute Serial (b) locomotion](#execute-serial-b-locomotion)
+    - [Execute Parallel locomotion](#execute-parallel-locomotion)
+    - [Execute Combined locomotion (both serial and parallel)](#execute-combined-locomotion-both-serial-and-parallel)
 - [Citation](#citation)
-    - [Repository:](#repository)
+    - [Repository](#repository)
 - [Contact](#contact)
 
 ## Build the Package
