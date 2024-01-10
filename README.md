@@ -49,7 +49,7 @@ Before launching the gazebo world, navigate through the packages to find the `sr
 
 ## Launch the Simulation
 
-Before launching any simulation, any new terminal must be always sourced with,
+Before launching a simulation, any new terminal must be always sourced with,
 
     cd mario_mpcc_ws
     source devel/setup.bash
