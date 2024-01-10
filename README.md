@@ -8,12 +8,12 @@ by ```Sairaj R Dillikar (MSc Robotics 2022-23, Cranfield University, United King
 
 - [Build the Package](#build-the-package)
     - [Requirements](#requirements)
-    - [Modifications to be made in the SRS spawning package](#modifications-to-be-made-in-the-srs-spawning-package)
+    - [Modifications to be made in the SRS Spawning Package](#modifications-to-be-made-in-the-srs-spawning-package)
 - [Launch the Simulation](#launch-the-simulation)
-    - [Execute Serial (a) locomotion](#execute-serial-a-locomotion)
-    - [Execute Serial (b) locomotion](#execute-serial-b-locomotion)
-    - [Execute Parallel locomotion](#execute-parallel-locomotion)
-    - [Execute Combined locomotion (both serial and parallel)](#execute-combined-locomotion-both-serial-and-parallel)
+    - [Execute Serial (a) Locomotion](#execute-serial-a-locomotion)
+    - [Execute Serial (b) Locomotion](#execute-serial-b-locomotion)
+    - [Execute Parallel Locomotion](#execute-parallel-locomotion)
+    - [Execute Combined Locomotion (both Serial and Parallel)](#execute-combined-locomotion-both-serial-and-parallel)
 - [Citation](#citation)
     - [Repository](#repository)
 - [Contact](#contact)
@@ -37,7 +37,7 @@ catkin build
 - [Python 3.7](https://www.python.org/downloads/release/python-370/)
 - [`ros_link_attacher`](https://github.com/pal-robotics/gazebo_ros_link_attacher) pkg (already included within this repository!)
 
-## Modifications to be made in the SRS spawning package
+## Modifications to be made in the SRS Spawning Package
 
 Before launching the gazebo world, navigate through the packages to find the `src/simplified_df_bot_description/src/exe_serial_coordmotion_1.cpp` file and make sure to add your PC `$USERNAME` within the `<uri>` tag. Same goes for the `src/exe_serial_coordmotion_2.cpp`, `src/exe_parallel_coordmotion_1.cpp`, and `src/exe_combined_coordmotion_1.cpp`
 
@@ -47,41 +47,41 @@ Before launching the gazebo world, navigate through the packages to find the `sr
 
 ## Launch the Simulation
 
-### Execute Serial (a) locomotion:
+### Execute Serial (a) Locomotion:
 
     cd mario_mpcc_ws
     source devel/setup.bash
     roslaunch simplified_df_bot_description execute_serial_locomotion.launch
     rosrun simplified_df_bot_description exe_serial_coordmotion_1
 
-![Serial (a) locomotion](resources/serial_motion_1.gif)
+![Serial (a) Locomotion](resources/serial_motion_1.gif)
 
-### Execute Serial (b) locomotion:
+### Execute Serial (b) Locomotion:
 
     cd mario_mpcc_ws
     source devel/setup.bash
     roslaunch simplified_df_bot_description execute_serial_locomotion.launch
     rosrun simplified_df_bot_description exe_serial_coordmotion_2
 
-![Serial (b) locomotion](resources/serial_motion_2.gif)
+![Serial (b) Locomotion](resources/serial_motion_2.gif)
 
-### Execute Parallel locomotion:
+### Execute Parallel Locomotion:
 
     cd mario_mpcc_ws
     source devel/setup.bash
     roslaunch simplified_df_bot_description execute_parallel_locomotion.launch
     rosrun simplified_df_bot_description exe_parallel_coordmotion_1
 
-![Parallel locomotion](resources/parallel_motion_1.gif)
+![Parallel Locomotion](resources/parallel_motion_1.gif)
 
-### Execute Combined locomotion (both serial and parallel):
+### Execute Combined Locomotion (both Serial and Parallel):
 
     cd mario_mpcc_ws
     source devel/setup.bash
     roslaunch simplified_df_bot_description execute_combined_locomotion.launch
     rosrun simplified_df_bot_description exe_combined_coordmotion_1
 
-![Combined locomotion (both serial and parallel)](resources/combined_coord.gif)
+![Combined Locomotion (both Serial and Parallel)](resources/combined_coord.gif)
 
 ## Citation
 
