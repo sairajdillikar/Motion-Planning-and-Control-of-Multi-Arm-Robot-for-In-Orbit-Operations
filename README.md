@@ -35,7 +35,7 @@ catkin build
 - [ROS Noetic Ninjemys 8](https://wiki.ros.org/noetic)
 - [Gazebo v11.11](https://classic.gazebosim.org/tutorials?tut=ros_installing&cat=connect_ros)
 - [Python 3.7](https://www.python.org/downloads/release/python-370/)
-- [`ros_link_attacher`](https://github.com/pal-robotics/gazebo_ros_link_attacher) Plugin (already included within this repository ([`gazebo_ros_link_attacher`](gazebo_ros_link_attacher)))
+- [`ros_link_attacher`](https://github.com/pal-robotics/gazebo_ros_link_attacher) Plugin (already included within this repository ([gazebo_ros_link_attacher](gazebo_ros_link_attacher)))
 
 ## Modifications to be made in the SRS Spawning Package
 
