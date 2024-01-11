@@ -126,4 +126,4 @@ If you use the Motion Planning architecture as part of a publication or utilise 
 
 ## Contact
 
-For questions, suggestions, or collaborations, feel free to reach out to the project author at [sairaj.dillikar.102@gmail.com](mailto:sairajdillikar@gmail.com).
+For questions, suggestions, or collaborations, feel free to reach out to the project author at [sairajdillikar@gmail.com](mailto:sairajdillikar@gmail.com).
