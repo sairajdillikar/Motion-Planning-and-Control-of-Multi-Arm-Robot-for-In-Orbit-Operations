@@ -61,7 +61,7 @@ Use the above two commands when using a new terminal, as executing simulation fo
 
 ### Execute Serial (a) Locomotion:
 
-Terminal-1: `roslaunch simplified_df_bot_description execute_serial_locomotion.launch`
+Terminal-1: ```roslaunch simplified_df_bot_description execute_serial_locomotion.launch```
 
 Terminal-2: `rosrun simplified_df_bot_description exe_serial_coordmotion_1`
 
