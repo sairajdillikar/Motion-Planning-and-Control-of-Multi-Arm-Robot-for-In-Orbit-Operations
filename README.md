@@ -45,7 +45,7 @@ catkin build
 Before launching the gazebo world, navigate through the packages to find the `src/simplified_df_bot_description/src/exe_serial_coordmotion_1.cpp` file and make sure to add your PC `$USERNAME` within the `<uri>` tag. Same goes for the `src/exe_serial_coordmotion_2.cpp`, `src/exe_parallel_coordmotion_1.cpp`, and `src/exe_combined_coordmotion_1.cpp`
 
 
-    <uri>/home/ $USERNAME /mario_mpcc_ws/src/srs_modules_description/meshes/base_link.stl</uri>
+    <uri>/home/ *$USERNAME* /mario_mpcc_ws/src/srs_modules_description/meshes/base_link.stl</uri>
 
 
 ## Launch the Simulation
