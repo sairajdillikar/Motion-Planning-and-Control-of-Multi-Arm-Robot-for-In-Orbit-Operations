@@ -114,7 +114,7 @@ If you use the Motion Planning architecture as part of a publication or utilise 
 ### Repository:
 ```bibtex
 @misc{motion_planning_mario_git,
-  author       = {Dillikar, Sairaj.R.},
+  author       = {Dillikar, Sairaj.R. and Upadhyay, Saurabh and Felicetti, Leonard and Tang, Gilbert},
   booktitle    = {GitHub repository},
   publisher    = {GitHub},
   title        = {Motion Planning and Control of Multi-Arm Robot for In-Orbit Operations},
