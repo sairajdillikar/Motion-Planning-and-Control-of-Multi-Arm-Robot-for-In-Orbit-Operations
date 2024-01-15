@@ -70,6 +70,9 @@ Terminal-2:
     rosrun simplified_df_bot_description exe_serial_coordmotion_1
 
 ![Serial (a) Locomotion](resources/serial_motion_1.gif)
+<p align="center">
+  <img src="resources/serial_motion_1.gif" alt="animated" />
+</p>
 
 ### Execute Serial (b) Locomotion:
 
