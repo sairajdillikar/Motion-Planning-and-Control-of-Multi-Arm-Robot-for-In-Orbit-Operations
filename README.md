@@ -69,7 +69,6 @@ Terminal-2:
 
     rosrun simplified_df_bot_description exe_serial_coordmotion_1
 
-![Serial (a) Locomotion](resources/serial_motion_1.gif)
 <p align="center">
   <img src="resources/serial_motion_1.gif" alt="animated" />
 </p>
@@ -84,7 +83,9 @@ Terminal-2:
     
     rosrun simplified_df_bot_description exe_serial_coordmotion_2
 
-![Serial (b) Locomotion](resources/serial_motion_2.gif)
+<p align="center">
+  <img src="resources/serial_motion_2.gif" alt="animated" />
+</p>
 
 ### Execute Parallel Locomotion:
 
@@ -96,7 +97,9 @@ Terminal-2:
 
     rosrun simplified_df_bot_description exe_parallel_coordmotion_1
 
-![Parallel Locomotion](resources/parallel_motion_1.gif)
+<p align="center">
+  <img src="resources/parallel_motion_1.gif" alt="animated" />
+</p>
 
 ### Execute Combined Locomotion (both Serial and Parallel):
 
@@ -108,7 +111,9 @@ Terminal-2:
 
     rosrun simplified_df_bot_description exe_combined_coordmotion_1
 
-![Combined Locomotion (both Serial and Parallel)](resources/combined_coord.gif)
+<p align="center">
+  <img src="resources/combined_coord.gif" alt="animated" />
+</p>
 
 ## Citation
 
