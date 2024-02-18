@@ -59,7 +59,7 @@ Use the above two commands when using a new terminal, as executing simulation fo
 1. For launching the simulation (`roslaunch`).
 2. To run the script with its respective control algorithm (`rosrun`).
 
-### Execute Serial (a) Locomotion:
+### Execute Serial (a) Locomotion (Lateral Movement):
 
 Terminal-1: 
     
@@ -73,7 +73,7 @@ Terminal-2:
   <img src="resources/serial_motion_1.gif" alt="animated" />
 </p>
 
-### Execute Serial (b) Locomotion:
+### Execute Serial (b) Locomotion (Lateral Movement):
 
 Terminal-1:
 
@@ -87,7 +87,7 @@ Terminal-2:
   <img src="resources/serial_motion_2.gif" alt="animated" />
 </p>
 
-### Execute Parallel Locomotion:
+### Execute Parallel Locomotion (Vertical Movement):
 
 Terminal-1:
 
@@ -101,7 +101,7 @@ Terminal-2:
   <img src="resources/parallel_motion_1.gif" alt="animated" />
 </p>
 
-### Execute Combined Locomotion (both Serial and Parallel):
+### Execute Combined Locomotion (both Serial/Lateral and Parallel/Vertical):
 
 Terminal-1:
 
