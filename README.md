@@ -41,7 +41,7 @@ catkin build
     - [Source Build: Linux](https://moveit.ai/install/source/)
     - [Moveit Visual Tools](https://github.com/moveit/moveit_visual_tools/tree/noetic-devel)
 - [Python 3.7](https://www.python.org/downloads/release/python-370/)
-- [*ros_link_attacher*](https://github.com/pal-robotics/gazebo_ros_link_attacher) Plugin (already included within this repository ([gazebo_ros_link_attacher](gazebo_ros_link_attacher)))
+- [*ros_link_attacher*](https://github.com/pal-robotics/gazebo_ros_link_attacher) Plugin (already included within this repository ([/gazebo_ros_link_attacher](gazebo_ros_link_attacher)))
 
 ## Modifications to be made in the SRS Spawning Package
 
