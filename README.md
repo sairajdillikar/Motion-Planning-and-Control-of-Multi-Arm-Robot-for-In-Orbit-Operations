@@ -50,6 +50,11 @@ Before launching the gazebo world, navigate through the packages to find the `sr
 
     <uri>/home/ $USERNAME /mario_mpcc_ws/src/srs_modules_description/meshes/base_link.stl</uri>
 
+    import subprocess
+    user_name = subprocess.check_output("echo ${SUDO_USER:-${USER}}", shell=True).strip()
+            home_var_path = '/home/'+user_name
+            shell_path = home_var_path+"/mario_mpcc_ws/src/srs_modules_description/meshes/base_link.stl"
+
 
 ## Launch the Simulation
 
