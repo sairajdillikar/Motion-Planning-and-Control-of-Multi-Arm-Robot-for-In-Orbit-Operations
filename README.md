@@ -17,6 +17,7 @@ Simulation videos of this project can be accessed by clicking [here](http://tiny
     - [Execute Parallel Locomotion](#execute-parallel-locomotion)
     - [Execute Combined Locomotion (both Serial and Parallel)](#execute-combined-locomotion-both-serial-and-parallel)
 - [Citation](#citation)
+    - [Publication](#publication)
     - [Repository](#repository)
 - [Contact](#contact)
 
@@ -126,6 +127,28 @@ Terminal-2:
 ## Citation
 
 If you use the Motion Planning architecture as part of a publication or utilise in a project development, please use the Bibtex below as a citation,
+
+### Publication:
+```bibtex
+@InProceedings{10.1007/978-3-031-72062-8_9,
+author="Dillikar, Sairaj R.
+and Leslie, Cameron
+and Upadhyay, Saurabh
+and Felicetti, Leonard
+and Tang, Gilbert",
+editor="Huda, M. Nazmul
+and Wang, Mingfeng
+and Kalganova, Tatiana",
+title="A ROS-Based Control Framework for Simulating Locomotion of a Multi-arm Space Assembly Robot",
+booktitle="Towards Autonomous Robotic Systems",
+year="2025",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="93--105",
+abstract="This paper proposes a ROS-based control framework for simulating the locomotion of a multi-arm space robot on a planar space structure. This framework has applications in technology demonstrations of space structure assembly, construction, and maintenance where a multi-arm robot has to traverse on a space structure building blocks known as Spatial Reticular Structures (SRS) to perform the space operation. The framework sets the desired environment and SRS structures in the first step and devises two movement primitives to achieve locomotion on the structure. A ROS-Gazebo-based simulation architecture is presented to execute the proposed control framework. The viability and limitations of the proposed control framework are discussed with simulation results.",
+isbn="978-3-031-72062-8"
+}
+```
 
 ### Repository:
 ```bibtex
