@@ -129,6 +129,7 @@ Terminal-2:
 If you use the Motion Planning architecture as part of a publication or utilise in a project development, please use the Bibtex below as a citation,
 
 ### Publication:
+The publication can be accessed at DOI:https://doi.org/10.1007/978-3-031-72062-8_9
 ```bibtex
 @InProceedings{10.1007/978-3-031-72062-8_9,
 author="Dillikar, Sairaj R.
