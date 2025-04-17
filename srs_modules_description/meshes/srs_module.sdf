@@ -24,7 +24,7 @@
             <scale>0.0001 0.0001 0.0001</scale>
 
             <!-- Add your PC Username here -->
-            <uri>/home/peraspera/test_ws/src/srs_modules_description/meshes/base_link.stl</uri>
+            <uri>/$HOME/test_ws/src/srs_modules_description/meshes/base_link.stl</uri>
             
           </mesh>
         </geometry>
